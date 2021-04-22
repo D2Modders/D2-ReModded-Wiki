@@ -1,0 +1,6 @@
+site_name: D2-ReModded-Wiki
+nav:
+    - Home: index.md
+    - Design Rationale: design-rationale.md
+    - Details and Usage: details-and-usage.md
+    - Installation: installation.md
