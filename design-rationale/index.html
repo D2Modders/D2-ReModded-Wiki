@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Design Rationale - D2-ReModded-Wiki</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">D2-ReModded-Wiki</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Design Rationale</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../details-and-usage/" class="nav-link">Details and Usage</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../installation/" class="nav-link">Installation</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href=".." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../details-and-usage/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#design-rationale" class="nav-link">Design Rationale</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#a-progression" class="nav-link">A) Progression</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#as-solution-proposal" class="nav-link">AS) Solution proposal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ar-rationale" class="nav-link">AR) Rationale:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#b-difficulty" class="nav-link">B) Difficulty</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#solution-proposal" class="nav-link">Solution proposal:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#c-mercenary-imbalance" class="nav-link">C) Mercenary imbalance</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#cs-solution-proposal" class="nav-link">CS) Solution proposal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#d-time-consumption-grind" class="nav-link">D) Time consumption - grind</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#ds-solution-proposal" class="nav-link">DS) Solution proposal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#e-end-game-content" class="nav-link">E) End Game content</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#solution-proposal_1" class="nav-link">Solution proposal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#f-useless-weapons" class="nav-link">F) Useless weapons</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#solution-proposal_2" class="nav-link">Solution proposal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#g-diversity-in-items-for-better-decisions" class="nav-link">G) Diversity in items for better decisions</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#gs-solution-proposal" class="nav-link">GS) Solution proposal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#h-useless-armors" class="nav-link">H) Useless armors</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#hs-solution-proposal" class="nav-link">HS) Solution proposal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#i-useless-skills" class="nav-link">I) Useless skills</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#is-solution-proposal" class="nav-link">IS) Solution proposal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#j-useless-attributes" class="nav-link">J) Useless attributes</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#js-solution-proposal" class="nav-link">JS) Solution proposal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#k-horadric-cube" class="nav-link">K) Horadric Cube</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#ks-solution-proposal" class="nav-link">KS) Solution proposal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#l-melee-imbalance" class="nav-link">L) Melee imbalance</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#ls-solution-proposal" class="nav-link">LS) Solution proposal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#m-general-balancing" class="nav-link">M) General balancing</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#ms-solution-proposal" class="nav-link">MS) Solution proposal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#general-qol-changes" class="nav-link">General QoL changes</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#solution-proposal_3" class="nav-link">Solution proposal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="design-rationale">Design Rationale</h1>
+<p>Diablo 2 is arguably the second-most influential game of all things Action Role Playing Games (ARPGs). The original Diablo was the first.</p>
+<p>Diablo 2 vanilla is not without its problems, however. In the following we chisel out the most harrowing game play and mechanics issues and propose solutions. The goal is to have a rationale where problem, principle, solutions and vision go hand in hand. All things can later be tweaked.</p>
+<h3 id="outline-table-of-topics">Outline Table of Topics</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#a-progression">a-progression</a></td>
+<td><a href="#b-difficulty">b-difficulty</a></td>
+<td><a href="#c-mercenary-imbalance">c-mercenary-imbalance</a></td>
+<td><a href="#d-time-consumption---grind">d-time-consumption---grind</a></td>
+<td><a href="#e-end-game-content">e-end-game-content</a></td>
+<td><a href="#f-useless-weapons">f-useless-weapons</a></td>
+</tr>
+<tr>
+<td><a href="#g-diversity-in-items-for-better-decisions">g-diversity-in-items-for-better-decisions</a></td>
+<td><a href="#h-useless-armors">h-useless-armors</a></td>
+<td><a href="#i-useless-skills">i-useless-skills</a></td>
+<td><a href="#j-useless-attributes">j-useless-attributes</a></td>
+<td><a href="#k-horadric-cube">k-horadric-cube</a></td>
+<td><a href="#l-melee-imbalance">l-melee-imbalance</a></td>
+</tr>
+<tr>
+<td><a href="#m-general-balancing">m-general-balancing</a></td>
+<td><a href="#general-qol-changes">general-qol-changes</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="a-progression">A) Progression</h1>
+<p>Main issue: there is very little incentive to play through the game with new chars and most chars will rush to Hell difficulty. Many items become obsolete in new acts and new difficulties.</p>
+<h2 id="as-solution-proposal">AS) Solution proposal</h2>
+<ol>
+<li>Make all Act bosses drop minimum drop a unique or a set item on quest completion.</li>
+<li>Add low level crafting starting from act 2 (see cube recipes later).</li>
+<li>Add new orbs/shards/stones that enable new cube recipes to upgrade existing gear (see cube recipes later).</li>
+<li>Make all less-played areas have better drops, higher level monsters for better exp, as well as possibility to target farm items in those areas. Areas in Act 1 could for example be buffed the following way:</li>
+</ol>
+<p>-- Underground Passage, add more sparkly chests, add more unique monsters, add superunique boss</p>
+<p>-- Crypt, add more sparkly chests, add more unique monsters, add superunique boss</p>
+<p>-- Mausoleum, add more sparkly chests, add more unique monsters, add superunique boss</p>
+<p>-- The Cave - add more sparkly chests, add more unique monsters, add superunique boss</p>
+<p>-- The Hole - add more sparkly chests, add more unique monsters, add superunique boss</p>
+<p>-- Tamoe Highland - add superunique boss with target drops</p>
+<p>-- The Pit, add more sparkly chests, add more unique monsters, add superunique boss</p>
+<p>-- Barracks, increase the quest reward (give an item used for crafting or transmuting, give a class-specific item)</p>
+<p>-- Jail level 1 and 2 - add superunique boss with target drops</p>
+<ul>
+<li>Act 2:</li>
+</ul>
+<p>-- Halls of the Dead lvl 1 and 2 - add more sparkly chests on nightmare and hell, add more unique monsters, add superunique boss</p>
+<p>-- Lost city</p>
+<p>-- Ancient Tunnels</p>
+<p>-- Canyon of the Magi</p>
+<p>-- Fake tombs</p>
+<ul>
+<li>Act 3:</li>
+</ul>
+<p>-- Spider forest</p>
+<p>-- Arachnid Lair</p>
+<p>-- Spider Cavern</p>
+<p>-- Great Marsh</p>
+<p>-- Swampy pit lvl 1-3</p>
+<p>-- Ruined Temple (In Kurast Bazaar)</p>
+<p>-- Disused Fane (In Kurast Bazaar)</p>
+<p>-- Forgotten Reliquary (In Upper Kurast)</p>
+<p>-- Forgotten Temple (In Upper Kurast)
+-- Ruined Fane (In Kurast Causeway)
+-- Disused Reliquary (In Kurast Causeway)</p>
+<ul>
+<li>Act 4:</li>
+</ul>
+<p>-- Plains of Despair</p>
+<p>-- Lost City</p>
+<ul>
+<li>Act 5:</li>
+</ul>
+<p>-- TBA</p>
+<p>-- TBA</p>
+<p>-- TBA</p>
+<h2 id="ar-rationale">AR) Rationale:</h2>
+<p>The more rewards that can be given in each area, the more those areas will be played. Rewards given based on risk/reward will feel rewarding for the players. If each area can give a chance to provide a special type of item or a specific item, those areas will also be played more.</p>
+<h1 id="b-difficulty">B) Difficulty</h1>
+<p>Main issue: Diablo 2 is too easy, even when playing Solo Self Found.</p>
+<h2 id="solution-proposal">Solution proposal:</h2>
+<ol>
+<li>
+<p>make central quests necessary for progression through the acts harder:</p>
+</li>
+<li>
+<p>buff Blood Raven and minions.</p>
+</li>
+<li>
+<p>Halls of the Dead monsters higher level and with more superuniques</p>
+</li>
+<li>
+<p>Add superunique boss to Sewers lvl 2</p>
+</li>
+<li>
+<p>Add higher monster levels to areas that are not directly involved in completing each act.</p>
+</li>
+</ol>
+<h1 id="c-mercenary-imbalance">C) Mercenary imbalance</h1>
+<p>Main issue: mercenaries are currently not balanced very well, making Act 2 or 3 mercs the de facto best choice.</p>
+<h2 id="cs-solution-proposal">CS) Solution proposal</h2>
+<ol>
+<li>Add auras to all mercenaries. However, we avoid the following auras as they are OP: holy freeze, conviction, salvation, fanaticism, sanctuary</li>
+<li>Make auras better based on difficulty, so player can swap out mercs or progress the same type of merc</li>
+<li>Act 1 mercs</li>
+</ol>
+<p>-- Normal Fire: fire arrow, vigor aura</p>
+<p>-- Nightmare Fire: exploding arrow, vigor aura</p>
+<p>-- Hell Fire: immolation arrow, prayer aura</p>
+<p>-- Normal Cold: cold arrow, meditation aura</p>
+<p>-- Nightmare Cold: ice arrow, meditation aura</p>
+<p>-- Hell Cold: freezing arrow, prayer aura</p>
+<ul>
+<li>Act 2 mercs (combat mercs removed)</li>
+</ul>
+<p>-- Normal Offensive: jab, thorns aura</p>
+<p>-- Nightmare Offensive: jab, thorns aura</p>
+<p>-- Hell Offensive: jab, blessed aim aura</p>
+<p>-- Normal Defensive: defiance aura</p>
+<p>-- Nightmare Defensive: jab, defiance aura</p>
+<p>-- Hell Defensive: jab, redemption aura</p>
+<ul>
+<li>Act 3 mercs: (all mercs cast shiver armor)</li>
+</ul>
+<p>-- Normal Fire: fire bolt, fire resist aura</p>
+<p>-- Nightmare Fire: fire ball, fire resist</p>
+<p>-- Hell Fire: hydra, holy fire</p>
+<p>-- Normal Cold: ice bolt, cold resist aura</p>
+<p>-- Nightmare Cold: glacial spike, cold resist aura</p>
+<p>-- Hell Cold: blizzard, aura??</p>
+<p>-- Normal Lightning: lightning, lightning resist aura</p>
+<p>-- Nightmare Lightning: chain lightning, lightning resist aura</p>
+<p>-- Hell Lightning: static field, holy lightning aura</p>
+<ul>
+<li>Act 5 mercs
+-- Normal: might
+-- Nightmare: might
+-- Hell: concentration</li>
+</ul>
+<h1 id="d-time-consumption-grind">D) Time consumption - grind</h1>
+<p>Main issue: playing Single Player is vastly different from Battle.net online play. The game drops are not single player friendly and it takes too long to find good items for a particular char.</p>
+<h2 id="ds-solution-proposal">DS) Solution proposal</h2>
+<ol>
+<li>
+<p>More frequent rune drops of HRs.</p>
+</li>
+<li>
+<p>More unique/rare/set item drops.</p>
+</li>
+<li>
+<p>Targeted farming in designated areas for the most sought after items (the best items should be farmed in end-game areas, though)</p>
+</li>
+<li>
+<p>more TBA</p>
+</li>
+</ol>
+<h1 id="e-end-game-content">E) End Game content</h1>
+<p>Main issue: the game gets stale after Baal and Cows Hell. Repetitive end game grind makes little sense once a char is strong enough.</p>
+<h2 id="solution-proposal_1">Solution proposal</h2>
+<ul>
+<li>Maps</li>
+<li>Stronger ubers</li>
+<li>Stronger Dclone</li>
+<li>End game items</li>
+<li>End game personalized set items.</li>
+<li>...TBA</li>
+</ul>
+<h1 id="f-useless-weapons">F) Useless weapons</h1>
+<p>Main issue: Polearms, axes, mauls, crossbows are all outshined by other weapons that are far superior.</p>
+<h2 id="solution-proposal_2">Solution proposal</h2>
+<ol>
+<li>Give each weapon type a unique base ability. Unique items of this type will be changed so some might not have the abilities (axes and polearms for example):</li>
+<li>Polearms: Open wounds, increase range</li>
+<li>Axes: Critical strike, increase range</li>
+<li>Mauls: Crushing blow</li>
+<li>Crossbows: physical pierce, crushing blow</li>
+</ol>
+<h1 id="g-diversity-in-items-for-better-decisions">G) Diversity in items for better decisions</h1>
+<p>Main issue: some builds and item types are solely BIS.</p>
+<h2 id="gs-solution-proposal">GS) Solution proposal</h2>
+<ul>
+<li>Add 2 x unique elite bows to compete with Windforce but for use in different situations (eg. one for elemental builds, and one for physical damage)</li>
+<li>Add</li>
+</ul>
+<h1 id="h-useless-armors">H) Useless armors</h1>
+<p>Main issue: Metal armors (with the exception of Archon Plates) have too high a str req and provide too little defense to matter. Elite soft armors are far superior than their metal counterparts.</p>
+<h2 id="hs-solution-proposal">HS) Solution proposal</h2>
+<ol>
+<li>Increase defense on exceptional and elite metal armors drastically to better scale with str reqs.</li>
+<li>Add flat and % damage reduction to metal armors (not including Archon plate and Cuirass; 1% for Russet and up to 5% for sacred armor. Could be variable so they vary when spawning with +/- 1%. Makes hunting for bases fun.)</li>
+<li>Add flat damage and magic reduction to Elite soft armors (highest being Archon plate).</li>
+</ol>
+<h1 id="i-useless-skills">I) Useless skills</h1>
+<p>Main issue: many skills are simply not good enough to be maxed.</p>
+<h2 id="is-solution-proposal">IS) Solution proposal</h2>
+<p>Make the best skills (large AOE and damage potential require 3 synergies, while less used skills should require max 2 synergies). Skills should not be completely reworked unless a fundamental flaw (such as Martial Arts skill tree for assassin, could be reworked to auto-release all charges on third hit for example).</p>
+<p>List of skill changes TBA.</p>
+<h1 id="j-useless-attributes">J) Useless attributes</h1>
+<p>Main issue: str, dex, vit and energy are very generic and only have little impact on the build type of each char. Energy is the worst offender as it is never useful</p>
+<h2 id="js-solution-proposal">JS) Solution proposal</h2>
+<ol>
+<li>add new bonuses to each char for each type of attributes added</li>
+<li>Sorc</li>
+</ol>
+<p>-- str: add to stamina</p>
+<p>-- dex:</p>
+<p>-- vit:</p>
+<p>-- energy:</p>
+<ul>
+<li>
+<p>Amazon</p>
+</li>
+<li>
+<p>Sorc</p>
+</li>
+</ul>
+<p>-- str:</p>
+<p>-- dex:</p>
+<p>-- vit:</p>
+<p>-- energy:</p>
+<ul>
+<li>Assassin:</li>
+</ul>
+<p>-- str:</p>
+<p>-- dex:</p>
+<p>-- vit:</p>
+<p>-- energy:</p>
+<ul>
+<li>Barbarian</li>
+</ul>
+<p>-- str:</p>
+<p>-- dex:</p>
+<p>-- vit:</p>
+<p>-- energy:</p>
+<ul>
+<li>Druid</li>
+</ul>
+<p>-- str:</p>
+<p>-- dex:</p>
+<p>-- vit:</p>
+<p>-- energy:</p>
+<ul>
+<li>Paladin</li>
+</ul>
+<p>-- str:</p>
+<p>-- dex:</p>
+<p>-- vit:</p>
+<p>-- energy:</p>
+<h1 id="k-horadric-cube">K) Horadric Cube</h1>
+<p>Main issue: using the horadric cube is rather limited to upgrading and crafting. This does not really boost the end-game nature of the game.
+TBA</p>
+<h2 id="ks-solution-proposal">KS) Solution proposal</h2>
+<ol>
+<li>Adding more cubing recipes to crafting for more targeting crafting. All weapons, chests, helmets, boots, gloves can be used for crafting. Crafting can be done using all levels of gems, starting with chipped. The level of gem will determine the minimum required level:
+Base lvl reqs:
+Chipped: lvl 20
+Flawed: lvl 30
+Normal: lvl 40
+Flawless: lvl 60
+Perfect: lvl 80</li>
+</ol>
+<p>Recipes are the same but only perfect gems will give the highest range of the affixes. It is also possible to add an additional affix to the types of crafting recipes:</p>
+<ul>
+<li>
+<p>Blood recipe:
+Diamond: attack rating
+Topaz: IAS
+Skull: + dmg undead/demons</p>
+</li>
+<li>
+<p>Blood recipe, weapons:</p>
+</li>
+<li>
+<p>Blood recipe, chests</p>
+</li>
+<li>
+<p>Blood recipe, helmet</p>
+</li>
+<li>
+<p>Blood recipe, ring</p>
+</li>
+<li>
+<p>Blood recipe, amulet</p>
+</li>
+<li>
+<p>Blood recipe, boots</p>
+</li>
+<li>
+<p>Blood recipe, gloves</p>
+</li>
+<li>
+<p>Blood recipe, belts</p>
+</li>
+<li>
+<p>Introduce a risk element to upgrading or changing items. Items will have a risk of bricking or losing affixes when upgrading.</p>
+</li>
+<li>Adding new stones/orbs to the game to reach more crafting potential:</li>
+<li>orb/stone of extraction: can extract essences and dyes out of found items. Useless set, rare or unique items can be cubed into essences that can potentially give a new affix to an item. The affix chosen is random based on the existing item affixes. Extraction of dyes can only be done on items with a color and by using an empty 'flask' item as well.</li>
+<li>orb/stone of infusion: can infuse an item with an essence. Risks losing a random affix (25% chance). Can also be used to dye an item by adding the number of dyes that the target item takes up in inventory space.</li>
+<li>orb/stone of boosting: can be used to upgrade an existing unique or set item with a similar unique item. The new item is boosted to a new tier with new stats (always higher than the previous stats). One 25% Chance guards and one 30% Chance guards would result in a random number with &gt;30% for example.</li>
+<li>orb/stone of corruption: can be used to add a new random affix to any magic, rare, set or unique item. Can also add sockets. Risks bricking the item (25%) into a random rare.</li>
+<li>Adding new item to add additional sockets to chests/helmets/weapons: Larzuk's Perforator.</li>
+</ul>
+<h1 id="l-melee-imbalance">L) Melee imbalance</h1>
+<h2 id="ls-solution-proposal">LS) Solution proposal</h2>
+<p>1.</p>
+<h1 id="m-general-balancing">M) General balancing</h1>
+<p>Main issue: Some</p>
+<h2 id="ms-solution-proposal">MS) Solution proposal</h2>
+<ol>
+<li>Defense will not change when running.</li>
+<li>Doubled base stamina.</li>
+<li>Blocking while moving.</li>
+<li>Removing animations from amazon when dodging.</li>
+<li>Melee attack deals splash damage.</li>
+</ol>
+<h1 id="general-qol-changes">General QoL changes</h1>
+<p>Main issue: more than 100 bugs currently exist and many have been fixed by other mods. Many modern issues with hotkeys, adding to stash and inventory, auto gold pickup etc.</p>
+<h2 id="solution-proposal_3">Solution proposal</h2>
+<ol>
+<li>Bug fixes implemented (see bug fix list elsewhere)</li>
+<li>Stacking of runes and gems.</li>
+<li>Move</li>
+</ol></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
